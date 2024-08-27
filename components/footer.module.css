@@ -1,0 +1,3 @@
+.link {
+  @apply focus:outline-none focus:ring focus:ring-slate-500/50 focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-500/50 relative after:h-[1px] after:top-5 after:absolute after:inset-0 after:rounded-[inherit] after:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white/.5)_50%,transparent_75%,transparent_100%)] dark:after:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white)_50%,transparent_75%,transparent_100%)] after:bg-[length:250%_250%,100%_100%] after:bg-[position:200%_0,0_0] after:bg-no-repeat after:[transition:background-position_0s_ease] hover:after:bg-[position:-100%_0,0_0] hover:after:duration-[1500ms] max-w-max uppercase;
+}

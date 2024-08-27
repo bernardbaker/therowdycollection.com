@@ -1,0 +1,15 @@
+.link {
+  @apply text-[rgb(113,87,212)] hover:bg-[rgb(113,87,212)]/10 border-2 border-[rgb(113,87,212)] w-full sm:w-40 text-center;
+}
+
+.link:nth-child(2) {
+  @apply bg-transparent border-none uppercase text-white hover:bg-transparent;
+}
+
+.button {
+  @apply focus:outline-none focus:bg-none focus:bg-transparent focus-visible:outline-none px-4 py-1 text-xl;
+}
+
+.button:nth-child(1) {
+  @apply !uppercase;
+}

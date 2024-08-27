@@ -1,0 +1,6 @@
+.link {
+  @apply text-white;
+}
+.button {
+  @apply focus:outline-none focus:bg-none focus:bg-transparent focus-visible:outline-none bg-transparent min-w-16 px-4 py-2 text-white;
+}

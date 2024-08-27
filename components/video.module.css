@@ -1,0 +1,7 @@
+.reactPlayer {
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: none;
+  @apply hidden invisible !w-full !h-[130px] sm:block sm:visible sm:!w-[380px] lg:!w-[600px] lg:!h-[200px];
+}

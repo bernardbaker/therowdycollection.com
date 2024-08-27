@@ -1,0 +1,3 @@
+.link {
+  @apply text-xl sm:text-2xl md:text-4xl text-white w-full text-left;
+}
