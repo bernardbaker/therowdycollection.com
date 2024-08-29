@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Page() {
   return (
     <div className={`grow flex flex-col p-4`}>
-      <header
+      {/* <header
         className={`flex flex-col items-center md:flex-row md:justify-between`}
       >
         <div className="flex flex-col self-start w-full">
@@ -40,18 +40,27 @@ export default function Page() {
         </div>
         <Link href="/">
           <Image
-            src="/images/rowdywellness.com.png"
-            alt="Rowdy Wellness logo"
+            src="/images/therowdycollection.com.png"
+            alt="The Rowdy Collection logo"
             width={160}
             height={160}
             className="w-[200px] h-[200px] md:w-[160px] md:h-[160px]"
           />
         </Link>
-      </header>
+      </header> */}
       <main className="flex flex-col grow overflow-hidden justify-center items-center">
-        <h1 className="text-2xl font-bold text-black">PAGE NOT FOUND</h1>
+        <Link href="/">
+          <Image
+            src="/images/therowdycollection.com.png"
+            alt="The Rowdy Collection logo"
+            width={160}
+            height={160}
+            className="w-[200px] h-[200px] md:w-[160px] md:h-[160px]"
+          />
+        </Link>
+        <h1 className="text-2xl font-thin text-black">PAGE NOT FOUND</h1>
       </main>
-      <footer
+      {/* <footer
         className={`flex flex-col md:flex-row md:justify-between landscape-max-500:mt-7`}
       >
         <Link
@@ -73,7 +82,7 @@ export default function Page() {
         <Link href="/individual-protocols" className="font-bold">
           INDIVIDUAL PROTOCOLS
         </Link>
-      </footer>
+      </footer> */}
     </div>
   );
 }

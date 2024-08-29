@@ -82,12 +82,12 @@ export default function Page(params: any) {
 
   return (
     <div
-      className={`grow flex flex-col p-4 transition-all duration-500 ${pageCss}`}
+      className={`grow flex flex-col p-4 pt-8 sm:p-10 sm:pt-16 transition-all duration-500 ${pageCss}`}
     >
       <header
-        className={`flex flex-col items-center md:flex-row md:justify-between ${headerCss}`}
+        className={`flex flex-col items-start gap-3 md:gap-0 md:flex-row md:justify-between md:items-center ${headerCss}`}
       >
-        <div className="flex flex-col self-start w-full">
+        <div className="flex flex-col">
           <div>
             <h1 className="text-black font-bold text-[24vw] leading-none -ml-[6px] md:text-8xl">
               ROWDY
@@ -96,78 +96,92 @@ export default function Page(params: any) {
               </span>
             </h1>
           </div>
-          <div className="flex justify-start items-center gap-4">
-            <span className="text-[8px]">
-              DECENTRALIZED WELLNESS
-              <br />
-              THAT REPRESENTS AN
-              <br />
-              EXPERIMENTAL LIFESTYLE.
-              <br />
-              FOR PROFESSIONAL USE ONLY
-            </span>
-            <span>33.76,-84.39002774</span>
-          </div>
-          <div
-            className={`-scale-y-100 -scale-x-100 md:text-right md:-ml-[8px] lg:-ml-[10px] xl:-ml-[16px] xxl:-ml-[10px] transition-all duration-1000 ${straplineCss}`}
-          >
-            <span className="tracking-[0.6vw] text-[10vw] font-bold md:text-4xl landscape-max-500:tracking-[0.94vw] transition-all duration-1000">
-              DECENTRALIZED
-            </span>
+          <div className="text-right mr-8">
+            <span className="text-lg">EST-1992</span>
           </div>
         </div>
-        <Image
-          src="/images/rowdywellness.com.png"
-          alt="Rowdy Wellness logo"
-          width={130}
-          height={130}
-          className="w-[200px] h-[200px] md:w-[160px] md:h-[160px]"
-        />
+        <div>
+          <Link
+            href="#"
+            className="font-thin"
+            onClick={(e) => handleLinkClick(e, "#")}
+            aria-disabled
+          >
+            HISTORY
+          </Link>
+        </div>
+        <div className="flex flex-col gap-3 items-start sm:items-end landscape-max-500:items-start">
+          <Link
+            href="#"
+            className="font-thin"
+            onClick={(e) => handleLinkClick(e, "#")}
+            aria-disabled
+          >
+            THE COLLECTION
+          </Link>
+          <Link
+            href="#"
+            className="font-thin"
+            onClick={(e) => handleLinkClick(e, "#")}
+            aria-disabled
+          >
+            THE ROWDY RECORDS
+          </Link>
+          <Link
+            href="#"
+            className="font-thin"
+            onClick={(e) => handleLinkClick(e, "#")}
+            aria-disabled
+          >
+            ROWDY TO WEAR
+          </Link>
+          <Link
+            href="#"
+            className="font-thin"
+            onClick={(e) => handleLinkClick(e, "#")}
+            aria-disabled
+          >
+            ROWDY PRO
+          </Link>
+          <Link
+            href="#"
+            className="font-thin"
+            onClick={(e) => handleLinkClick(e, "#")}
+            aria-disabled
+          >
+            ROWDY WELLNESS
+          </Link>
+        </div>
       </header>
       <main
-        className={`grow flex flex-col justify-start items-center md:justify-center opacity-0 transition-all duration-1000 ${mainCss}`}
+        className={`grow flex flex-col justify-start items-center md:justify-center md:pb-[10%] opacity-0 transition-all duration-1000 ${mainCss}`}
       >
-        <section className="flex flex-col justify-center items-center md:items-start">
+        <section className="flex flex-col justify-center items-center mt-[10%] md:items-start md:mt-0">
           <h2
-            className={`text-black font-bold text-[17vw] leading-none tracking-[0.5vw] md:text-[7.5rem] md:tracking-[0.7vw] opacity-0 transition-all duration-1000 ${titleCss}`}
+            className={`text-black font-bold text-[10vw] leading-none tracking-[0.6vw] md:text-[10vw] md:tracking-[0.7vw] opacity-0 transition-all duration-1000 ${titleCss}`}
           >
-            WELLNESS
+            DECENTRALIZED
           </h2>
-          <p className={`text-black text-center`}>
-            PROFESSIONAL CONSULTATIONS TO ALTERNATIVE MEDICINES
-          </p>
         </section>
       </main>
       <footer
-        className={`flex flex-col md:flex-row md:justify-between landscape-max-500:mt-7 opacity-0 transition-all duration-1000 ${linksCss}`}
+        className={`flex flex-col gap-3 md:flex-row md:justify-between landscape-max-500:mt-7 opacity-0 transition-all duration-1000 ${linksCss}`}
       >
         <Link
-          href="https://www.rowdypro.com"
-          className="font-bold"
-          target="_blank"
+          href="#"
+          className="font-thin"
+          onClick={(e) => handleLinkClick(e, "#")}
+          aria-disabled
         >
-          ROWDY PRO
+          DON&apos;T TAP OUT
         </Link>
         <Link
-          href="/about"
-          className="font-bold"
-          onClick={(e) => handleLinkClick(e, "/about")}
+          href="#"
+          className="font-thin"
+          onClick={(e) => handleLinkClick(e, "#")}
+          aria-disabled
         >
-          ABOUT
-        </Link>
-        <Link
-          href="/consultations"
-          className="font-bold"
-          onClick={(e) => handleLinkClick(e, "/consultations")}
-        >
-          CONSULTATIONS
-        </Link>
-        <Link
-          href="/individual-protocols"
-          className="font-bold"
-          onClick={(e) => handleLinkClick(e, "/individual-protocols")}
-        >
-          INDIVIDUAL PROTOCOLS
+          A DALLAS AUSTIN COMPANY
         </Link>
       </footer>
     </div>
