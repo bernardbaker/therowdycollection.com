@@ -1,7 +1,7 @@
 {
-    "name": "Rowdy Wellness – A Holistic Approach To Mental and Physical Health",
-    "short_name": "Rowdy Wellness",
-    "description": "A comprehensive and integrative approach to enhancing both mental and physical well-being.",
+    "name": "The Rowdy Collection",
+    "short_name": "The Rowdy Collection",
+    "description": "",
     "icons": [
         {
             "src": "/images/android-chrome-192x192.png",
@@ -21,8 +21,7 @@
     "lang": "en",
     "orientation": "portrait",
     "categories": [
-        "wellness",
-        "therapy"
+        ""
     ],
     "id": "/?utm_medium=PWA&utm_source=launcher",
     "screenshots": [
