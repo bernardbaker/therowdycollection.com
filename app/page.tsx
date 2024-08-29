@@ -156,12 +156,13 @@ export default function Page(params: any) {
       <main
         className={`grow flex flex-col justify-start items-center md:justify-center md:pb-[10%] opacity-0 transition-all duration-1000 ${mainCss}`}
       >
-        <section className="flex flex-col justify-center items-center mt-[10%] md:items-start md:mt-0">
+        <section className="flex flex-col justify-center items-center mt-[10%] md:items-center md:mt-0">
           <h2
             className={`text-black font-bold text-[10vw] leading-none tracking-[0.6vw] md:text-[10vw] md:tracking-[0.7vw] opacity-0 transition-all duration-1000 ${titleCss}`}
           >
             DECENTRALIZED
           </h2>
+          <span className="text-black font-thin">COMING SOON</span>
         </section>
       </main>
       <footer
