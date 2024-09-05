@@ -175,14 +175,7 @@ export default function Page(params: any) {
         >
           DON&apos;T TAP OUT
         </Link>
-        <Link
-          href="#"
-          className="font-thin"
-          onClick={(e) => handleLinkClick(e, "#")}
-          aria-disabled
-        >
-          A DALLAS AUSTIN COMPANY
-        </Link>
+        <div className="font-thin">A DALLAS AUSTIN COMPANY</div>
       </footer>
     </div>
   );
