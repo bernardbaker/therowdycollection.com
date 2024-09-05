@@ -103,8 +103,7 @@ export default function Page(params: any) {
         <div>
           <Link
             href="#"
-            className="font-thin"
-            onClick={(e) => handleLinkClick(e, "#")}
+            className="font-thin text-black/30 pointer-events-none"
             aria-disabled
           >
             HISTORY
@@ -112,42 +111,37 @@ export default function Page(params: any) {
         </div>
         <div className="flex flex-col gap-3 items-start md:items-end landscape-max-500:items-start">
           <Link
-            href="#"
+            href="https://www.rowdyshop.com"
             className="font-thin"
-            onClick={(e) => handleLinkClick(e, "#")}
-            aria-disabled
+            target="_blank"
           >
             THE COLLECTION
           </Link>
           <Link
-            href="#"
+            href="https://www.rowdyrecords.com"
             className="font-thin"
-            onClick={(e) => handleLinkClick(e, "#")}
-            aria-disabled
+            target="_blank"
           >
             THE ROWDY RECORDS
           </Link>
           <Link
             href="#"
-            className="font-thin"
-            onClick={(e) => handleLinkClick(e, "#")}
+            className="font-thin text-black/30 pointer-events-none"
             aria-disabled
           >
             ROWDY TO WEAR
           </Link>
           <Link
-            href="#"
+            href="https://www.rowdypro.com"
             className="font-thin"
-            onClick={(e) => handleLinkClick(e, "#")}
-            aria-disabled
+            target="_blank"
           >
             ROWDY PRO
           </Link>
           <Link
-            href="#"
+            href="https://www.rowdywellness.com"
             className="font-thin"
-            onClick={(e) => handleLinkClick(e, "#")}
-            aria-disabled
+            target="_blank"
           >
             ROWDY WELLNESS
           </Link>
@@ -169,8 +163,7 @@ export default function Page(params: any) {
       >
         <Link
           href="#"
-          className="font-thin"
-          onClick={(e) => handleLinkClick(e, "#")}
+          className="font-thin text-black/30 pointer-events-none"
           aria-disabled
         >
           DON&apos;T TAP OUT
