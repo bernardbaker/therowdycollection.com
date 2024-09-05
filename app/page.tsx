@@ -110,7 +110,7 @@ export default function Page(params: any) {
             HISTORY
           </Link>
         </div>
-        <div className="flex flex-col gap-3 items-start sm:items-end landscape-max-500:items-start">
+        <div className="flex flex-col gap-3 items-start md:items-end landscape-max-500:items-start">
           <Link
             href="#"
             className="font-thin"
@@ -162,7 +162,6 @@ export default function Page(params: any) {
           >
             DECENTRALIZED
           </h2>
-          <span className="text-black font-thin">COMING SOON</span>
         </section>
       </main>
       <footer
