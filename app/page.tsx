@@ -106,17 +106,11 @@ export default function Page(params: any) {
             className="font-thin text-black/30 pointer-events-none"
             aria-disabled
           >
-            HISTORY
+            LEGAYCY
           </Link>
         </div>
         <div className="flex flex-col gap-3 items-start md:items-end landscape-max-500:items-start">
-          <Link
-            href="https://www.rowdyshop.com"
-            className="font-thin"
-            target="_blank"
-          >
-            THE COLLECTION
-          </Link>
+          <p className="font-bold">THE COLLECTION</p>
           <Link
             href="https://www.rowdyrecords.com"
             className="font-thin"
@@ -125,11 +119,11 @@ export default function Page(params: any) {
             THE ROWDY RECORDS
           </Link>
           <Link
-            href="#"
-            className="font-thin text-black/30 pointer-events-none"
+            href="https://www.rowdyshop.com"
+            className="font-thin text-black"
             aria-disabled
           >
-            ROWDY TO WEAR
+            ROWDY SHOP
           </Link>
           <Link
             href="https://www.rowdypro.com"
