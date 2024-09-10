@@ -106,7 +106,7 @@ export default function Page(params: any) {
             className="font-thin text-black/30 pointer-events-none"
             aria-disabled
           >
-            LEGAYCY
+            LEGACY
           </Link>
         </div>
         <div className="flex flex-col gap-3 items-start md:items-end landscape-max-500:items-start">
