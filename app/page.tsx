@@ -142,7 +142,7 @@ export default function Page(params: any) {
       >
         <section className="flex flex-col justify-center items-center mt-[10%] md:items-center md:mt-0">
           <Showreel
-            file="/video/HOTELROOM.mp4"
+            file="https://stream.mux.com/AseG6oBcocI6NvTBAO01DEdigQofqYG2MNq01Ir36ppcE.m3u8"
             poster="/images/HOTELROOM.jpg"
           />
           <h2

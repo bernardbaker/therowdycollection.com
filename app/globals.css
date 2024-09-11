@@ -38,3 +38,10 @@ body {
 
 @layer utilities {
 }
+
+mux-player {
+  /* Hide all controls at once */
+  --controls: none;
+  --media-object-fit: cover;
+  --media-object-position: center;
+}

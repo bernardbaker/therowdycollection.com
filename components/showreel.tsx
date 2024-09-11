@@ -1,9 +1,7 @@
 "use client";
 
-// import { Button } from "@headlessui/react";
-import { useEffect, useRef, useState } from "react";
-// import styles from "./header.module.css";
-import Image from "next/image";
+import { useEffect, useRef } from "react";
+import MuxPlayer from "@mux/mux-player-react";
 
 interface Props {
   file: string;
@@ -42,19 +40,25 @@ export const Showreel = ({ file, poster }: Props) => {
 
   return (
     <div className="w-screen flex flex-col items-center">
-      <video
-        src={file}
-        poster={poster}
-        className="aspect-video w-[calc(100%-40vw)] object-cover h-10 sm:h-20 lg:h-24 xl:h-36 xxl:h-52 xxxl:h-64 landscape-max-500:h-16"
-        autoPlay={true}
-        muted={true}
-        loop={true}
-        preload="auto"
-        ref={ref}
-        playsInline={true}
-      >
-        <source src={file} type="video/mp4" />
-      </video>
+      <div className="w-[calc(100%-40vw)] overflow-hidden">
+        <MuxPlayer
+          streamType="on-demand"
+          playbackId="AseG6oBcocI6NvTBAO01DEdigQofqYG2MNq01Ir36ppcE"
+          primaryColor="#FFFFFF"
+          secondaryColor="#000000"
+          autoPlay
+          muted={true}
+          poster={poster}
+          playsInline={true}
+          className="h-10 sm:h-20 lg:h-24 xl:h-36 xxl:h-52 xxxl:h-64 landscape-max-500:h-16"
+          preload="auto"
+          loop={true}
+          style={{
+            aspectRatio: "16 / 9",
+            objectFit: "cover",
+          }}
+        />
+      </div>
     </div>
   );
 };
