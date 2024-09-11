@@ -146,9 +146,13 @@ export default function Page(params: any) {
       >
         <section className="flex flex-col justify-center items-center mt-[10%] md:items-center md:mt-0">
           <h2
-            className={`text-black font-bold text-[10vw] leading-none tracking-[0.6vw] md:text-[10vw] md:tracking-[0.7vw] opacity-0 transition-all duration-1000 ${titleCss}`}
+            className={`text-black text-nowrap font-bold text-[10vw] leading-none tracking-[0.6vw] md:text-[10vw] md:tracking-[0.7vw] opacity-0 transition-all duration-1000 ${titleCss}`}
           >
-            DECENTRALIZED
+            DECENTRALI
+            <span className="rotate-180 -scale-x-100 inline-block relative top-[3px]">
+              Z
+            </span>
+            ED
           </h2>
         </section>
       </main>
