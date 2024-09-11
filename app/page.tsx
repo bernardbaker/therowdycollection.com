@@ -89,9 +89,9 @@ export default function Page(params: any) {
       >
         <div className="flex flex-col">
           <div>
-            <h1 className="text-black font-bold text-[24vw] leading-none -ml-[6px] md:text-8xl">
+            <h1 className="text-black font-bold leading-none -ml-[6px] text-[23vw] md:text-8xl">
               ROWDY
-              <span className="text-black font-thin text-xs align-top relative top-[11px] left-[3px]">
+              <span className="text-black font-thin text-xs align-top relative top-[11px] left-[3px] landscape-max-500:top-[22px]">
                 &reg;
               </span>
             </h1>
