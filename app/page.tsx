@@ -101,11 +101,7 @@ export default function Page(params: any) {
           </div>
         </div>
         <div>
-          <Link
-            href="#"
-            className="font-thin text-black/30 pointer-events-none"
-            aria-disabled
-          >
+          <Link href="/legacy" className="font-thin text-black" aria-disabled>
             LEGACY
           </Link>
         </div>
