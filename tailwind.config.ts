@@ -16,6 +16,9 @@ const config: Config = {
         xxl: {
           raw: "(min-width: 1440px)",
         },
+        xxxl: {
+          raw: "(min-width: 2560px)",
+        },
       },
     },
   },

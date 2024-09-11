@@ -149,7 +149,7 @@ const components: PortableTextComponents = {
         </div>
       );
     },
-    videoBlock: ({ value }) => <Showreel value={value} />,
+    videoBlock: ({ value }) => <Showreel {...value} />,
     salesPoints: ({ value }) => {
       return (
         <div

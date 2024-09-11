@@ -3,8 +3,8 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import Image from "next/image";
 import Link from "next/link";
+import { Showreel } from "@/components/showreel";
 
 export default function Page(params: any) {
   const pathname = usePathname();
@@ -138,9 +138,13 @@ export default function Page(params: any) {
         </div>
       </header>
       <main
-        className={`grow flex flex-col justify-start items-center md:justify-center md:pb-[10%] opacity-0 transition-all duration-1000 ${mainCss}`}
+        className={`grow flex flex-col justify-start items-center md:justify-center md:py-[10%] opacity-0 transition-all duration-1000 ${mainCss}`}
       >
         <section className="flex flex-col justify-center items-center mt-[10%] md:items-center md:mt-0">
+          <Showreel
+            file="/video/HOTELROOM.mp4"
+            poster="/images/HOTELROOM.jpg"
+          />
           <h2
             className={`text-black text-nowrap font-bold text-[10vw] leading-none tracking-[0.6vw] md:text-[10vw] md:tracking-[0.7vw] opacity-0 transition-all duration-1000 ${titleCss}`}
           >
