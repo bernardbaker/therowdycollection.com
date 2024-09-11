@@ -149,7 +149,7 @@ export default function Page(params: any) {
             className={`text-black text-nowrap font-bold text-[10vw] leading-none tracking-[0.6vw] md:text-[10vw] md:tracking-[0.7vw] opacity-0 transition-all duration-1000 ${titleCss}`}
           >
             DECENTRALI
-            <span className="rotate-180 -scale-x-100 inline-block relative top-[3px]">
+            <span className="rotate-180 -scale-x-100 inline-block relative top-[1px] sm:top-[3px] lg:top-[4px] xxl:top-[7px]">
               Z
             </span>
             ED
