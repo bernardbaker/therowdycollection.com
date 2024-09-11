@@ -146,7 +146,7 @@ export default function Page(params: any) {
       <main
         className={`grow flex flex-col justify-start items-center md:justify-center md:pb-[10%] opacity-0 transition-all duration-1000 ${mainCss}`}
       >
-        <section className="flex flex-col justify-center gap-6 py-20 md:py-0">
+        <section className="flex flex-col justify-center gap-6 py-20 md:pb-0">
           <p className="text-black font-thin">
             Rowdy Records, founded by Dallas Austin and LA Reid in 1992, is a
             record label that played a significant role in shaping the sound of
