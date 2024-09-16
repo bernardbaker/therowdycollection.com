@@ -100,7 +100,7 @@ export default function Page(params: any) {
             <span className="text-lg">EST-1992</span>
           </div>
         </div>
-        <div>
+        <div className="flex flex-col items-center lg:absolute lg:origin-center lg:left-[50%]">
           <Link href="/legacy" className="font-thin text-black" aria-disabled>
             LEGACY
           </Link>
