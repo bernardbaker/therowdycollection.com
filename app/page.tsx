@@ -100,9 +100,13 @@ export default function Page(params: any) {
             <span className="text-lg">EST-1992</span>
           </div>
         </div>
-        <div className="flex flex-col items-center lg:absolute lg:origin-center lg:left-[50%]">
-          <Link href="/legacy" className="font-thin text-black" aria-disabled>
-            LEGACY
+        <div className="flex flex-col items-center lg:absolute lg:origin-center lg:left-[50%] lg:-translate-x-2/4">
+          <Link
+            href="/photo-gallery"
+            className="font-thin text-black/30 pointer-events-none"
+            aria-disabled
+          >
+            PHOTO GALLERY
           </Link>
         </div>
         <div className="flex flex-col gap-3 items-start md:items-end landscape-max-500:items-start">
