@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ServiceWorker } from "@/service.worker";
-import { loadPageMetadata } from "@/sanity/loader/loadQuery";
+// import { loadPageMetadata } from "@/sanity/loader/loadQuery";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -48,6 +48,7 @@ export default async function RootLayout({
 }>) {
   // const query = await loadPageMetadata("/");
   // if (!query.data) throw new Error("Page metadata not found");
+  // console.log(query.data[0]);
   // const { title, description } = query.data[0];
   return (
     <html lang="en">
@@ -63,8 +64,8 @@ export default async function RootLayout({
   gtag('js', new Date());
   gtag('config', 'G-G9T9V9KRZF');"
         />
-        {/* <title>{`${title}`}</title> */}
-        {/* <meta name="description" content={description} /> */}
+        <title>{`The Rowdy Collection`}</title>
+        <meta name="description" content={`The Rowdy Collection`} />
       </head>
       <body className="flex flex-col min-h-screen">{children}</body>
       <ServiceWorker />
