@@ -86,6 +86,10 @@ export default function Page({ data }: { data: Header }) {
               className="font-thin text-black"
               aria-disabled
               target={link.internal ? "_self" : "_blank"}
+              style={{
+                pointerEvents: link.active ? "all" : "none",
+                opacity: link.active ? 1 : 0.7,
+              }}
             >
               {link.label}
             </Link>
@@ -100,6 +104,10 @@ export default function Page({ data }: { data: Header }) {
               className="font-thin text-black"
               aria-disabled
               target={link.internal ? "_self" : "_blank"}
+              style={{
+                pointerEvents: link.active ? "all" : "none",
+                opacity: link.active ? 1 : 0.7,
+              }}
             >
               {link.label}
             </Link>
