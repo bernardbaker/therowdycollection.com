@@ -12,6 +12,7 @@ import {
   pageQuery,
   headerQuery,
   footerTextQuery,
+  straplineQuery,
 } from "../lib/queries";
 import { token } from "../lib/token";
 import {
@@ -22,6 +23,7 @@ import {
   Navigation,
   Page,
   PageMetadata,
+  Strapline,
 } from "@/sanity/types";
 
 const serverClient = client.withConfig({
@@ -144,5 +146,15 @@ export function loadFooterText(): Promise<
     footerTextQuery,
     {},
     { next: { tags: ["footer"], revalidate: 60 } }
+  );
+}
+
+export function loadStrapline(
+  slug: string
+): Promise<queryStore.QueryResponseInitial<ArrayLike<Strapline> | null>> {
+  return loadQuery<Strapline | null>(
+    straplineQuery,
+    { slug },
+    { next: { tags: ["strapline"], revalidate: 60 } }
   );
 }

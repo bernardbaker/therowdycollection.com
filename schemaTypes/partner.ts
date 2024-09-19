@@ -30,11 +30,6 @@ export const partner = defineType({
       title: "Partner strapline details",
     }),
     defineField({
-      name: "infoCards",
-      type: "reference",
-      to: [{ type: "infoCard" }],
-    }),
-    defineField({
       name: "artists",
       type: "reference",
       to: [{ type: "artists" }],

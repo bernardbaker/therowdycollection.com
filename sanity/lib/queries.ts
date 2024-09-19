@@ -554,3 +554,11 @@ export const footerTextQuery = groq`
   text
 }
 `;
+
+// STRAPLINE
+export const straplineQuery = groq`
+*[_type == "strapline" && page->slug.current == $slug] {
+  title,
+  "flip":flip[]
+}
+`;

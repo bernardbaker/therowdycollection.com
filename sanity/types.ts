@@ -75,3 +75,8 @@ export interface Header extends ArrayLike<Header> {
 export interface Footer extends ArrayLike<Footer> {
   text: string[];
 }
+
+export interface Strapline extends ArrayLike<Strapline> {
+  title: string;
+  flip: string[];
+}

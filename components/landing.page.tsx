@@ -4,13 +4,15 @@ import { useEffect, useState } from "react";
 
 import Link from "next/link";
 import { Showreel } from "@/components/showreel";
-import { Footer, Header } from "@/sanity/types";
+import { Footer, Header, Strapline } from "@/sanity/types";
 
 export default function Page({
   header,
+  strapline,
   footer,
 }: {
   header: Header;
+  strapline: Strapline;
   footer: Footer;
 }) {
   const pathname = usePathname();
@@ -55,6 +57,21 @@ export default function Page({
       return () => clearTimeout(timeout);
     }
   }, [isTransitioning, pendingUrl, router]);
+
+  const straplineNodes = strapline?.title?.split("").map((char, index) => {
+    if (strapline.flip.includes(char)) {
+      return (
+        <span
+          key={index}
+          className="rotate-180 -scale-x-100 inline-block relative top-[1px] sm:top-[3px] lg:top-[4px] xxl:top-[7px]"
+        >
+          {char}
+        </span>
+      );
+    } else {
+      return <span key={index}>{char}</span>;
+    }
+  });
 
   const handleLinkClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
@@ -131,11 +148,7 @@ export default function Page({
           <h2
             className={`text-black text-nowrap font-bold text-[10vw] leading-none tracking-[0.6vw] md:text-[10vw] md:tracking-[0.7vw] opacity-0 transition-all duration-1000 ${titleCss}`}
           >
-            DECENTRALI
-            <span className="rotate-180 -scale-x-100 inline-block relative top-[1px] sm:top-[3px] lg:top-[4px] xxl:top-[7px]">
-              Z
-            </span>
-            ED
+            {straplineNodes}
           </h2>
         </section>
       </main>

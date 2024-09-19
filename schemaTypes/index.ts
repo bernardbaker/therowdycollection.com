@@ -16,8 +16,7 @@ import { footer } from "./footer";
 import { footerBlock } from "./footerBlock";
 import { header } from "./header";
 import { headerBlock } from "./headerBlock";
-import { infoCards } from "./infoCard";
-import { infoCardBlock } from "./infoCardBlock";
+import { strapline } from "./strapline";
 import { logoBlock } from "./logoBlock";
 import { metadata } from "./metadata";
 import { navigation } from "./navigation";
@@ -50,8 +49,6 @@ export const schemaTypes = [
   footerBlock,
   header,
   headerBlock,
-  infoCards,
-  infoCardBlock,
   logoBlock,
   metadata,
   navigation,
@@ -62,6 +59,7 @@ export const schemaTypes = [
   salesPoints,
   socialLink,
   socialLinks,
+  strapline,
   youTube,
   videoBlock,
 ];

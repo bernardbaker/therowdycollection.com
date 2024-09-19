@@ -1,14 +1,14 @@
 import { defineType, defineField, defineArrayMember } from "sanity";
 
-export const infoCards = defineType({
+export const strapline = defineType({
   type: "document",
-  name: "infoCard",
-  title: "Information cards",
+  name: "strapline",
+  title: "Strapline with flipped character",
   fields: [
     defineField({
       type: "string",
       name: "title",
-      title: "Info' card notes",
+      title: "Strapline below the video",
     }),
     defineField({
       name: "page",
@@ -17,11 +17,11 @@ export const infoCards = defineType({
     }),
     defineField({
       type: "array",
-      name: "cta",
-      title: "Information cards",
+      name: "flip",
+      title: "Flipped characters",
       of: [
         defineArrayMember({
-          type: "infoCardBlock",
+          type: "string",
         }),
       ],
     }),

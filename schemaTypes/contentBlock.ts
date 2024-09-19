@@ -44,12 +44,6 @@ export const contentBlock = defineType({
         }),
         defineArrayMember({
           type: "reference",
-          name: "infoCards",
-          title: "Pick a set of info cards",
-          to: [{ type: "infoCard" }],
-        }),
-        defineArrayMember({
-          type: "reference",
           name: "partner",
           title: "Pick a partner to be displayed on this page",
           to: [{ type: "partner" }],
