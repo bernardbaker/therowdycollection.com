@@ -6,11 +6,6 @@ export const footerBlock = defineType({
   type: "object",
   fields: [
     defineField({
-      name: "socials",
-      type: "array",
-      of: [defineArrayMember({ type: "socialLink" })],
-    }),
-    defineField({
       name: "navigation",
       type: "reference",
       to: [{ type: "navigation" }],

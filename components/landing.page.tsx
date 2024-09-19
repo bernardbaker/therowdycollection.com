@@ -4,9 +4,15 @@ import { useEffect, useState } from "react";
 
 import Link from "next/link";
 import { Showreel } from "@/components/showreel";
-import { Header } from "@/sanity/types";
+import { Footer, Header } from "@/sanity/types";
 
-export default function Page({ data }: { data: Header }) {
+export default function Page({
+  header,
+  footer,
+}: {
+  header: Header;
+  footer: Footer;
+}) {
   const pathname = usePathname();
   const router = useRouter();
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -68,18 +74,18 @@ export default function Page({ data }: { data: Header }) {
         <div className="flex flex-col">
           <div>
             <h1 className="text-black font-bold leading-none -ml-[6px] text-[23vw] md:text-8xl">
-              {data?.title}
+              {header?.title}
               <span className="text-black font-thin text-xs align-top relative top-[11px] left-[3px] landscape-max-500:top-[22px]">
                 &reg;
               </span>
             </h1>
           </div>
           <div className="text-right mr-8">
-            <span className="text-lg">{data.established}</span>
+            <span className="text-lg">{header.established}</span>
           </div>
         </div>
         <div className="flex flex-col items-center lg:absolute lg:origin-center lg:left-[50%] lg:-translate-x-2/4">
-          {data.linksInTheCenter.map((link, index) => (
+          {header.linksInTheCenter.map((link, index) => (
             <Link
               key={index}
               href={link.link}
@@ -97,7 +103,7 @@ export default function Page({ data }: { data: Header }) {
         </div>
         <div className="flex flex-col gap-3 items-start md:items-end landscape-max-500:items-start">
           <p className="font-bold">THE COLLECTION</p>
-          {data.linksOnTheRight.map((link, index) => (
+          {header.linksOnTheRight.map((link, index) => (
             <Link
               key={index}
               href={link.link}
@@ -136,14 +142,11 @@ export default function Page({ data }: { data: Header }) {
       <footer
         className={`flex flex-col gap-3 md:flex-row md:justify-between landscape-max-500:mt-7 opacity-0 transition-all duration-1000 ${linksCss}`}
       >
-        <Link
-          href="#"
-          className="font-thin text-black/30 pointer-events-none"
-          aria-disabled
-        >
-          DON&apos;T TAP OUT
-        </Link>
-        <div className="font-thin">A DALLAS AUSTIN COMPANY</div>
+        {footer.text.map((item, index) => (
+          <div key={index} className="font-thin">
+            {item}
+          </div>
+        ))}
       </footer>
     </div>
   );

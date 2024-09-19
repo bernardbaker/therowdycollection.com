@@ -526,6 +526,7 @@ export const pageQuery = groq`
 
 // NEW QUERIES
 
+// HEADER
 export const headerQuery = groq`
 *[_type == "header" && internal->slug.current == $slug] {
   title,
@@ -544,5 +545,12 @@ export const headerQuery = groq`
     'link': coalesce(internal->slug.current, externalUrl),
     active
   },
+}
+`;
+
+// FOOTER
+export const footerTextQuery = groq`
+*[_type == "footer" && page == "Landing page"] {
+  text
 }
 `;

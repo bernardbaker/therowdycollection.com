@@ -11,11 +11,13 @@ import {
   navigationQuery,
   pageQuery,
   headerQuery,
+  footerTextQuery,
 } from "../lib/queries";
 import { token } from "../lib/token";
 import {
   Faqs,
   Footer,
+  Footer_,
   Header,
   Navigation,
   Page,
@@ -112,9 +114,9 @@ export function loadFaqs(
 }
 
 export function loadFooter(): Promise<
-  queryStore.QueryResponseInitial<ArrayLike<Footer> | null>
+  queryStore.QueryResponseInitial<ArrayLike<Footer_> | null>
 > {
-  return loadQuery<Footer | null>(
+  return loadQuery<Footer_ | null>(
     footerQuery,
     {},
     { next: { tags: ["footer"], revalidate: 60 } }
@@ -132,5 +134,15 @@ export function loadHeader(
       slug,
     },
     { next: { tags: ["header"], revalidate: 60 } }
+  );
+}
+
+export function loadFooterText(): Promise<
+  queryStore.QueryResponseInitial<ArrayLike<Footer> | null>
+> {
+  return loadQuery<Footer | null>(
+    footerTextQuery,
+    {},
+    { next: { tags: ["footer"], revalidate: 60 } }
   );
 }

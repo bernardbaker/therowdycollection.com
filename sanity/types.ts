@@ -35,7 +35,7 @@ export interface Page {
   content: Array<Record<string, any>>;
 }
 
-export interface Footer extends ArrayLike<Footer> {
+export interface Footer_ extends ArrayLike<Footer_> {
   copyrightMessage: string;
   copyrightName: string;
   logos: Logos;
@@ -70,4 +70,8 @@ export interface Header extends ArrayLike<Header> {
     link: string;
     active: boolean;
   }>;
+}
+
+export interface Footer extends ArrayLike<Footer> {
+  text: string[];
 }
