@@ -10,9 +10,17 @@ import {
   metadataQuery,
   navigationQuery,
   pageQuery,
+  headerQuery,
 } from "../lib/queries";
 import { token } from "../lib/token";
-import { Faqs, Footer, Navigation, Page, PageMetadata } from "@/sanity/types";
+import {
+  Faqs,
+  Footer,
+  Header,
+  Navigation,
+  Page,
+  PageMetadata,
+} from "@/sanity/types";
 
 const serverClient = client.withConfig({
   token,
@@ -110,5 +118,19 @@ export function loadFooter(): Promise<
     footerQuery,
     {},
     { next: { tags: ["footer"], revalidate: 60 } }
+  );
+}
+
+// NEW QUERIES
+
+export function loadHeader(
+  slug: string
+): Promise<queryStore.QueryResponseInitial<ArrayLike<Header> | null>> {
+  return loadQuery<Header | null>(
+    headerQuery,
+    {
+      slug,
+    },
+    { next: { tags: ["header"], revalidate: 60 } }
   );
 }

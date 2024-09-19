@@ -53,3 +53,21 @@ export interface Faqs {
   answer: Record<string, string>;
   schemaMarkup: any;
 }
+
+// NEW TYPES
+export interface Header extends ArrayLike<Header> {
+  title: string;
+  established: string;
+  linksInTheCenter: Array<{
+    label: string;
+    internal: boolean;
+    link: string;
+    active: boolean;
+  }>;
+  linksOnTheRight: Array<{
+    label: string;
+    internal: boolean;
+    link: string;
+    active: boolean;
+  }>;
+}

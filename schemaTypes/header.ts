@@ -12,12 +12,24 @@ export const header = defineType({
       description: "Display a headline in the header.",
     }),
     defineField({
-      name: "logo",
-      type: "logoBlock",
+      name: "established",
+      type: "string",
     }),
     defineField({
-      name: "content",
-      type: "headerBlock",
+      type: "reference",
+      name: "internal",
+      title: "Link to website page",
+      to: [{ type: "page", title: "Page" }],
+    }),
+    defineField({
+      name: "linksInTheCenter",
+      type: "array",
+      of: [{ type: "navigationLink" }],
+    }),
+    defineField({
+      name: "linksOnTheRight",
+      type: "array",
+      of: [{ type: "navigationLink" }],
     }),
   ],
 });

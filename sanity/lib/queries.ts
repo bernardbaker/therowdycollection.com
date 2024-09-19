@@ -523,3 +523,26 @@ export const pageQuery = groq`
   }
 }
 `;
+
+// NEW QUERIES
+
+export const headerQuery = groq`
+*[_type == "header" && internal->slug.current == $slug] {
+  title,
+  established,
+  "linksInTheCenter":linksInTheCenter[]{
+    label,
+    _type,
+    "internal": coalesce(internal != undefined, false),
+    'link': coalesce(internal->slug.current, externalUrl),
+    active,
+  },
+    "linksOnTheRight":linksOnTheRight[]{
+    label,
+    _type,
+    "internal": coalesce(internal != undefined, false),
+    'link': coalesce(internal->slug.current, externalUrl),
+    active
+  },
+}
+`;

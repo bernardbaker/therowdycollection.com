@@ -12,7 +12,7 @@ export const navigationLink = defineType({
     defineField({
       type: "reference",
       name: "internal",
-      title: "Link to DAD website page",
+      title: "Link to website page",
       to: [{ type: "page", title: "Page" }],
     }),
     defineField({
