@@ -88,7 +88,7 @@ export default function Page({ data }: { data: Header }) {
               target={link.internal ? "_self" : "_blank"}
               style={{
                 pointerEvents: link.active ? "all" : "none",
-                opacity: link.active ? 1 : 0.7,
+                opacity: link.active ? 1 : 0.3,
               }}
             >
               {link.label}
@@ -106,7 +106,7 @@ export default function Page({ data }: { data: Header }) {
               target={link.internal ? "_self" : "_blank"}
               style={{
                 pointerEvents: link.active ? "all" : "none",
-                opacity: link.active ? 1 : 0.7,
+                opacity: link.active ? 1 : 0.3,
               }}
             >
               {link.label}
