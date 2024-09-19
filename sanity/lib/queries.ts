@@ -562,3 +562,11 @@ export const straplineQuery = groq`
   "flip":flip[]
 }
 `;
+
+// VIDEO
+export const videoQuery = groq`
+*[_type == "video" && page->slug.current == $slug] {
+  file,
+  "poster":poster.asset->url
+}
+`;

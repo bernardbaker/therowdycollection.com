@@ -4,16 +4,18 @@ import { useEffect, useState } from "react";
 
 import Link from "next/link";
 import { Showreel } from "@/components/showreel";
-import { Footer, Header, Strapline } from "@/sanity/types";
+import { Footer, Header, Strapline, Video } from "@/sanity/types";
 
 export default function Page({
   header,
   strapline,
   footer,
+  video,
 }: {
   header: Header;
   strapline: Strapline;
   footer: Footer;
+  video: Video;
 }) {
   const pathname = usePathname();
   const router = useRouter();
@@ -141,10 +143,7 @@ export default function Page({
         className={`grow flex flex-col justify-start items-center md:justify-center md:py-[10%] opacity-0 transition-all duration-1000 ${mainCss}`}
       >
         <section className="flex flex-col justify-center items-center mt-[10%] md:items-center md:mt-0">
-          <Showreel
-            file="https://stream.mux.com/AseG6oBcocI6NvTBAO01DEdigQofqYG2MNq01Ir36ppcE.m3u8"
-            poster="/images/HOTELROOM.jpg"
-          />
+          <Showreel file={video.file} poster={video.poster} />
           <h2
             className={`text-black text-nowrap font-bold text-[10vw] leading-none tracking-[0.6vw] md:text-[10vw] md:tracking-[0.7vw] opacity-0 transition-all duration-1000 ${titleCss}`}
           >

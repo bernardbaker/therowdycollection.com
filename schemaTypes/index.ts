@@ -28,6 +28,7 @@ import { salesPoints } from "./salesPoints";
 import { socialLink } from "./socialLink";
 import { socialLinks } from "./socialLinks";
 import { youTube } from "./youtube";
+import { video } from "./video";
 import { videoBlock } from "./videoBlock";
 
 export const schemaTypes = [
@@ -61,5 +62,6 @@ export const schemaTypes = [
   socialLinks,
   strapline,
   youTube,
+  video,
   videoBlock,
 ];

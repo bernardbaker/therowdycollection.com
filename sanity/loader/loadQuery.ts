@@ -13,6 +13,7 @@ import {
   headerQuery,
   footerTextQuery,
   straplineQuery,
+  videoQuery,
 } from "../lib/queries";
 import { token } from "../lib/token";
 import {
@@ -24,6 +25,7 @@ import {
   Page,
   PageMetadata,
   Strapline,
+  Video,
 } from "@/sanity/types";
 
 const serverClient = client.withConfig({
@@ -154,6 +156,16 @@ export function loadStrapline(
 ): Promise<queryStore.QueryResponseInitial<ArrayLike<Strapline> | null>> {
   return loadQuery<Strapline | null>(
     straplineQuery,
+    { slug },
+    { next: { tags: ["strapline"], revalidate: 60 } }
+  );
+}
+
+export function loadVideo(
+  slug: string
+): Promise<queryStore.QueryResponseInitial<ArrayLike<Video> | null>> {
+  return loadQuery<Video | null>(
+    videoQuery,
     { slug },
     { next: { tags: ["strapline"], revalidate: 60 } }
   );

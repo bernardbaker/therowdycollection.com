@@ -80,3 +80,8 @@ export interface Strapline extends ArrayLike<Strapline> {
   title: string;
   flip: string[];
 }
+
+export interface Video extends ArrayLike<Video> {
+  file: string;
+  poster: string;
+}
