@@ -103,7 +103,7 @@ export default function Page(params: any) {
         <div className="flex flex-col items-center lg:absolute lg:origin-center lg:left-[50%] lg:-translate-x-2/4">
           <Link
             href="/photo-gallery"
-            className="font-thin text-black/30 pointer-events-none"
+            className="font-thin text-black"
             aria-disabled
           >
             PHOTO GALLERY
@@ -116,7 +116,7 @@ export default function Page(params: any) {
             className="font-thin"
             target="_blank"
           >
-            THE ROWDY RECORDS
+            ROWDY RECORDS
           </Link>
           <Link
             href="https://www.rowdyshop.com"
